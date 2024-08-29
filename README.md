@@ -1,1 +1,4 @@
 # GRUPO12-2024-PROYINF
+
+* Matias Pajarito - 202273522-8
+* 
