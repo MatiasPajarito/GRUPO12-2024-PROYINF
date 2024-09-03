@@ -4,7 +4,7 @@
 * Matias Pajarito - 202273522-8
 * Bruno Yañez - 202230528-2
 * Pedro Miranda - 201930556-5
-* 
+* Andreu Lechuga - 
 
 ## Wiki
 
