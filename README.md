@@ -6,7 +6,7 @@
 * Pedro Miranda - 201930556-5
 * Andreu Lechuga - 202073595-6
 
-## Wiki
+## Wiki - Documentacion
 
 Pueden acceder a la wiki mediante el siguiente enlace [enlace](https://github.com/MatiasPajarito/GRUPO12-2024-PROYINF/wiki)
 
