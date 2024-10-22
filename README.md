@@ -9,3 +9,5 @@
 ## Wiki - Documentacion
 
 Pueden acceder a la wiki mediante el siguiente enlace [enlace](https://github.com/MatiasPajarito/GRUPO12-2024-PROYINF/wiki)
+
+### [LINK VIDEO PROTOTIPO](https://youtu.be/cCE63GOYPSI)
