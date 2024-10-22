@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generación de Boletines</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        .form-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: auto;
+        }
+        h1 {
+            text-align: center;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+    <script>
+        // Mostrar el campo de texto cuando se selecciona "Otros"
+        function mostrarCampoTema() {
+            var temaSelect = document.getElementById("tema");
+            var campoOtroTema = document.getElementById("otroTemaContainer");
+            if (temaSelect.value === "otros") {
+                campoOtroTema.classList.remove("hidden");
+            } else {
+                campoOtroTema.classList.add("hidden");
+                document.getElementById("otroTema").value = ""; // Limpiar el campo si no es "Otros"
+            }
+        }
+
+        // Función para mostrar el prompt y redirigir
+        function mostrarConfirmacion(event) {
+            event.preventDefault();  // Prevenir el envío del formulario
+
+            // Obtener los valores del formulario
+            const tema = document.getElementById("tema").value;
+            const otroTema = document.getElementById("otroTema").value;
+            const plazo = document.getElementById("plazo").value;
+
+            let temaFinal = tema === "otros" ? otroTema : tema;  // Si selecciona "Otros", usar el tema personalizado
+
+            let plazoTexto = "";
+            if (plazo === "1_mes") {
+                plazoTexto = "1 mes";
+            } else if (plazo === "3_meses") {
+                plazoTexto = "3 meses";
+            } else if (plazo === "6_meses") {
+                plazoTexto = "6 meses";
+            }
+
+            // Mostrar el mensaje de confirmación
+            alert(`Petición de boletín para el tema '${temaFinal}' con plazo ${plazoTexto} ha sido registrada.`);
+
+            // Redirigir a la página de Estado de Boletines
+            window.location.href = "Estado_Boletines.html";
+        }
+    </script>
+</head>
+<body>
+
+<div class="form-container">
+    <h1>Generación de Boletines</h1>
+    <form onsubmit="mostrarConfirmacion(event)">
+        <!-- Título del Boletín -->
+        <label for="titulo">Título del Boletín</label>
+        <input type="text" id="titulo" name="titulo" placeholder="Ingrese el título del boletín" required>
+
+        <!-- Seleccionar Tema -->
+        <label for="tema">Tema del Boletín</label>
+        <select id="tema" name="tema" onchange="mostrarCampoTema()" required>
+            <option value="">Seleccione un tema</option>
+            <option value="sequía">Sequía</option>
+            <option value="plagas">Plagas Agrícolas</option>
+            <option value="cambio_climatico">Cambio Climático</option>
+            <option value="otros">Otros</option>
+        </select>
+
+        <!-- Campo oculto para el tema personalizado -->
+        <div id="otroTemaContainer" class="hidden">
+            <label for="otroTema">Especifique el Tema</label>
+            <input type="text" id="otroTema" name="otroTema" placeholder="Escriba el tema">
+        </div>
+
+        <!-- Seleccionar Prioridad -->
+        <label for="prioridad">Prioridad</label>
+        <select id="prioridad" name="prioridad" required>
+            <option value="">Seleccione la prioridad</option>
+            <option value="alta">Alta</option>
+            <option value="media">Media</option>
+            <option value="baja">Baja</option>
+        </select>
+
+        <!-- Seleccionar Plazo de Entrega -->
+        <label for="plazo">Plazo de Entrega</label>
+        <select id="plazo" name="plazo" required>
+            <option value="">Seleccione el plazo</option>
+            <option value="1_mes">Urgente (1 mes)</option>
+            <option value="3_meses">Lo antes posible (3 meses)</option>
+            <option value="6_meses">Sin apuro (6 meses)</option>
+        </select>
+
+        <!-- Descripción del Boletín -->
+        <label for="descripcion">Descripción del Boletín</label>
+        <textarea id="descripcion" name="descripcion" rows="4" placeholder="Describa brevemente el boletín"></textarea>
+
+        <!-- Botón de Enviar -->
+        <input type="submit" value="Generar Boletín">
+    </form>
+</div>
+
+</body>
+</html>
