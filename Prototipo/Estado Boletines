@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estado de los Boletines</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+            text-align: center;
+        }
+        a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Estado de los Boletines</h1>
+    <p>Aquí puedes ver el estado actual de los boletines en proceso o finalizados.</p>
+
+    <ul>
+        <li><b>Temática:</b> Sequía - <b>Estado:</b> Aprobado y subido - <b>Fecha de registro:</b> 2023-08-01 - <b>Días desde el registro:</b> 80 días</li>
+        <li><b>Temática:</b> Plagas Agrícolas - <b>Estado:</b> En revisión - <b>Fecha de registro:</b> 2023-09-15 - <b>Días desde el registro:</b> 35 días</li>
+        <li><b>Temática:</b> Riego en Escasez Hídrica - <b>Estado:</b> Registrado - <b>Fecha de registro:</b> 2023-10-05 - <b>Días desde el registro:</b> 15 días</li>
+        <li><b>Temática:</b> Cultivos Resistentes a Plagas - <b>Estado:</b> Generándose - <b>Fecha de registro:</b> 2023-09-28 - <b>Días desde el registro:</b> 22 días</li>
+        <li><b>Temática:</b> Cambio Climático - <b>Estado:</b> En revisión - <b>Fecha de registro:</b> 2023-09-20 - <b>Días desde el registro:</b> 30 días</li>
+    </ul>
+    
+    
+    
+
+    <a href="index.html">Volver a la página principal</a>
+</body>
+</html>
