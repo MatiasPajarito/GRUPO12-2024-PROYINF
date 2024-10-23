@@ -10,4 +10,4 @@
 
 Pueden acceder a la wiki mediante el siguiente enlace [enlace](https://github.com/MatiasPajarito/GRUPO12-2024-PROYINF/wiki)
 
-### [LINK VIDEO PROTOTIPO](https://youtu.be/cCE63GOYPSI)
+### https://www.youtube.com/watch?v=TAgy9_8pgcM&ab_channel=PedroMiranda
