@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -11,6 +10,25 @@
             background-color: #f4f4f4;
             padding: 20px;
             text-align: center;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 12px;
+            text-align: center;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
         }
         a {
             color: #4CAF50;
@@ -25,17 +43,50 @@
     <h1>Estado de los Boletines</h1>
     <p>Aquí puedes ver el estado actual de los boletines en proceso o finalizados.</p>
 
-    <ul>
-        <li><b>Temática:</b> Sequía - <b>Estado:</b> Aprobado y subido - <b>Fecha de registro:</b> 2023-08-01 - <b>Días desde el registro:</b> 80 días</li>
-        <li><b>Temática:</b> Plagas Agrícolas - <b>Estado:</b> En revisión - <b>Fecha de registro:</b> 2023-09-15 - <b>Días desde el registro:</b> 35 días</li>
-        <li><b>Temática:</b> Riego en Escasez Hídrica - <b>Estado:</b> Registrado - <b>Fecha de registro:</b> 2023-10-05 - <b>Días desde el registro:</b> 15 días</li>
-        <li><b>Temática:</b> Cultivos Resistentes a Plagas - <b>Estado:</b> Generándose - <b>Fecha de registro:</b> 2023-09-28 - <b>Días desde el registro:</b> 22 días</li>
-        <li><b>Temática:</b> Cambio Climático - <b>Estado:</b> En revisión - <b>Fecha de registro:</b> 2023-09-20 - <b>Días desde el registro:</b> 30 días</li>
-    </ul>
-    
-    
-    
+    <table>
+        <thead>
+            <tr>
+                <th>Temática</th>
+                <th>Estado</th>
+                <th>Fecha de registro</th>
+                <th>Días desde el registro</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Sequía</td>
+                <td>Registrado</td>
+                <td>Hoy</td>
+                <td>0 dias</td>
+            </tr>
+            <tr>
+                <td>Plagas Agrícolas</td>
+                <td>Generándose</td>
+                <td>2024-10-22</td>
+                <td>1 dia</td>
+            </tr>
+            <tr>
+                <td>Riego en Escasez Hídrica</td>
+                <td>En revisión</td>
+                <td>2024-10-07</td>
+                <td>15 días</td>
+            </tr>
+            <tr>
+                <td>Cultivos Resistentes a Plagas</td>
+                <td>Aprobado</td>
+                <td>2024-10-01</td>
+                <td>21 días</td>
+            </tr>
+            <tr>
+                <td>Cambio Climático</td>
+                <td>Subido</td>
+                <td>2024-09-30</td>
+                <td>22 días</td>
+            </tr>
+        </tbody>
 
+    </table>
+    
     <a href="index.html">Volver a la página principal</a>
 </body>
 </html>
