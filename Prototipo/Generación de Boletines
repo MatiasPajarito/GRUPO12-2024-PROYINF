@@ -47,28 +47,25 @@
         }
     </style>
     <script>
-        // Mostrar el campo de texto cuando se selecciona "Otros"
         function mostrarCampoTema() {
             var temaSelect = document.getElementById("tema");
             var campoOtroTema = document.getElementById("otroTemaContainer");
-            if (temaSelect.value === "otros") {
+            if (temaSelect.value === "otro") {
                 campoOtroTema.classList.remove("hidden");
             } else {
                 campoOtroTema.classList.add("hidden");
-                document.getElementById("otroTema").value = ""; // Limpiar el campo si no es "Otros"
+                document.getElementById("otroTema").value = "";
             }
         }
 
-        // Función para mostrar el prompt y redirigir
         function mostrarConfirmacion(event) {
-            event.preventDefault();  // Prevenir el envío del formulario
+            event.preventDefault();
 
-            // Obtener los valores del formulario
             const tema = document.getElementById("tema").value;
             const otroTema = document.getElementById("otroTema").value;
             const plazo = document.getElementById("plazo").value;
 
-            let temaFinal = tema === "otros" ? otroTema : tema;  // Si selecciona "Otros", usar el tema personalizado
+            let temaFinal = tema === "otro" ? otroTema : tema;
 
             let plazoTexto = "";
             if (plazo === "1_mes") {
@@ -79,11 +76,15 @@
                 plazoTexto = "6 meses";
             }
 
-            // Mostrar el mensaje de confirmación
-            alert(`Petición de boletín para el tema '${temaFinal}' con plazo ${plazoTexto} ha sido registrada.`);
-
-            // Redirigir a la página de Estado de Boletines
-            window.location.href = "Estado_Boletines.html";
+            const confirmacion = confirm(`Tema: '${temaFinal}'\nPrioridad: ${document.getElementById("prioridad").value}\nPlazo: ${plazoTexto}\n\n¿Los datos están correctos?`);
+            
+            if (confirmacion) {
+                // Redirigir directamente sin mostrar un mensaje extra
+                window.location.href = "Estado_Boletines.html";
+            } else {
+                // Cambiar el mensaje cuando el usuario cancela
+                alert("Revisa bien los detalles antes de generar el boletín.");
+            }
         }
     </script>
 </head>
@@ -92,27 +93,21 @@
 <div class="form-container">
     <h1>Generación de Boletines</h1>
     <form onsubmit="mostrarConfirmacion(event)">
-        <!-- Título del Boletín -->
-        <label for="titulo">Título del Boletín</label>
-        <input type="text" id="titulo" name="titulo" placeholder="Ingrese el título del boletín" required>
 
-        <!-- Seleccionar Tema -->
         <label for="tema">Tema del Boletín</label>
         <select id="tema" name="tema" onchange="mostrarCampoTema()" required>
             <option value="">Seleccione un tema</option>
             <option value="sequía">Sequía</option>
             <option value="plagas">Plagas Agrícolas</option>
             <option value="cambio_climatico">Cambio Climático</option>
-            <option value="otros">Otros</option>
+            <option value="otro">Otro</option>
         </select>
 
-        <!-- Campo oculto para el tema personalizado -->
         <div id="otroTemaContainer" class="hidden">
             <label for="otroTema">Especifique el Tema</label>
             <input type="text" id="otroTema" name="otroTema" placeholder="Escriba el tema">
         </div>
 
-        <!-- Seleccionar Prioridad -->
         <label for="prioridad">Prioridad</label>
         <select id="prioridad" name="prioridad" required>
             <option value="">Seleccione la prioridad</option>
@@ -121,7 +116,6 @@
             <option value="baja">Baja</option>
         </select>
 
-        <!-- Seleccionar Plazo de Entrega -->
         <label for="plazo">Plazo de Entrega</label>
         <select id="plazo" name="plazo" required>
             <option value="">Seleccione el plazo</option>
@@ -130,14 +124,13 @@
             <option value="6_meses">Sin apuro (6 meses)</option>
         </select>
 
-        <!-- Descripción del Boletín -->
         <label for="descripcion">Descripción del Boletín</label>
         <textarea id="descripcion" name="descripcion" rows="4" placeholder="Describa brevemente el boletín"></textarea>
 
-        <!-- Botón de Enviar -->
         <input type="submit" value="Generar Boletín">
     </form>
 </div>
 
 </body>
 </html>
+
