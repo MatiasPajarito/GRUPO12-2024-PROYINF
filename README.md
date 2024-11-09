@@ -65,10 +65,7 @@ cp config/example.env config/development.env
 ```
 
 ## 📝 Licencia
-Este proyecto está bajo la Licencia [tu_licencia] - ver el archivo [LICENSE](LICENSE) para más detalles.
-
-## 🤝 Contribuir
-Las contribuciones son bienvenidas. Por favor, lee [CONTRIBUTING.md](CONTRIBUTING.md) para detalles sobre nuestro código de conducta y el proceso para enviarnos pull requests.
+Este proyecto está bajo la Licencia - ver el archivo [LICENSE](LICENSE) para más detalles.
 
 ---
 Desarrollado con ❤️ por Grupo 12 - 2024
