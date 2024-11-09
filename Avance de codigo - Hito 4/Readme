@@ -15,7 +15,7 @@ A continuación, se proporcionan enlaces a videos tutoriales para instalar cada 
 
 ---
 
-# Pasos para configurar el entorno
+## Pasos para configurar el entorno
 
 ### 1. Coloca la carpeta `api` en el escritorio
 - Asegúrate de que la carpeta llamada **`api`** esté ubicada en el escritorio de tu sistema operativo, ya que su ubicación es necesaria para el correcto funcionamiento del proyecto.
