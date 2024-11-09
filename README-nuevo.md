@@ -31,13 +31,19 @@ Para una visión general del proyecto, puedes ver nuestra [presentación en vide
 - Estado: En desarrollo, Pendiente
 - Versión: 1.0.0
 - Última actualización: [fecha]
-- Estamos a la espera de su respuesta para tener acceso a la api gratis para investigadores, estudiantes y organizaciones sin fines de lucro (ver [link](https://www.newscatcherapi.com/free-news-api))
+Estamos a la espera de su respuesta para tener acceso a la api gratis para investigadores, estudiantes y organizaciones sin fines de lucro (ver [link](https://www.newscatcherapi.com/free-news-api)). En caso del ser exitoso, la utilizariamos para navegar y filtrar resultados de noticias a nivel global.
+
+### SerpApi - [Weblink](https://serpapi.com/)
+- Estado: En desarrollo
+- Versión: 1.0.0
+- Última actualización: [8-11-2024]
+Estamos desarrollando el codigo necesario para utilizarla en sitios especificos utilizados frecuentemente en la generacion de Boletines. 
 
 ## 🛠️ Tecnologías Utilizadas
 - Frontend: HTML5, CSS3, JavaScript
 - Backend: Python
 - Base de datos: PostgreSQL
-- APIs: Google Search API
+- APIs: NewsCatcher API, SerpApi
 - Herramientas: Git, Docker
 
 ## 📋 Requisitos Previos
