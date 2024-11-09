@@ -36,7 +36,7 @@ Para una visión general del proyecto, puedes ver nuestra [presentación en vide
 ### SerpApi - [Weblink](https://serpapi.com/)
 - Estado: En desarrollo
 - Versión: 1.0.0
-- Última actualización: [88-11-2024]
+- Última actualización: [08-11-2024]
 - Nos encontramos desarrollando el codigo necesario para utilizarla en sitios especificos utilizados frecuentemente en la generacion de Boletines. 
 
 ## 🛠️ Tecnologías Utilizadas
