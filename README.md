@@ -65,7 +65,7 @@ cp config/example.env config/development.env
 ```
 
 ## 📝 Licencia
-Este proyecto está bajo la Licencia - ver el archivo [LICENSE](LICENSE) para más detalles.
+Este proyecto está bajo la Licencia - ver el archivo [LICENSE](LICENSE.md) para más detalles.
 
 ---
 Desarrollado con ❤️ por Grupo 12 - 2024
