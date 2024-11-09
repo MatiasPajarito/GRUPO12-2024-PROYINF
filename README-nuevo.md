@@ -15,21 +15,23 @@ Este proyecto consiste en un sistema web para la generación y gestión de Bolet
 
 ## 📚 Documentación
 La documentación completa del proyecto está disponible en nuestra [Wiki](https://github.com/MatiasPajarito/GRUPO12-2024-PROYINF/wiki). Esta incluye:
-- Guías de instalación
-- Documentación de API
-- Manuales de usuario
-- Documentación técnica
+- Actores Relevantes
+- Objetivos y Criterios de Exito
+- Diagrama de Contexto
+- Modelos de Dominio
+- Diagramas de Secuencia
+- Documentacion API
 
 ## 🎥 Demostración
 Para una visión general del proyecto, puedes ver nuestra [presentación en video](https://www.youtube.com/watch?v=TAgy9_8pgcM).
 
 ## 🔧 Estado Actual de la API
 
-### NewsScraper API - [url](https://www.newscatcherapi.com/)
+### NewsScraper API - [Weblink](https://www.newscatcherapi.com/)
 - Estado: En desarrollo, Pendiente
 - Versión: 1.0.0
 - Última actualización: [fecha]
-- Estamos a la espera de su respuesta para tener acceso a la api gratis para investigadores, estudiantes y organizaciones sin fines de lucro (ver (link)[https://www.newscatcherapi.com/free-news-api]) 
+- Estamos a la espera de su respuesta para tener acceso a la api gratis para investigadores, estudiantes y organizaciones sin fines de lucro (ver [link](https://www.newscatcherapi.com/free-news-api))
 
 ## 🛠️ Tecnologías Utilizadas
 - Frontend: HTML5, CSS3, JavaScript
