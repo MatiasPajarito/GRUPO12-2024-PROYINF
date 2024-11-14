@@ -1,6 +1,7 @@
 # GRUPO12-2024-PROYINF 🌱
 
 Sistema de generación de documentos agrícolas (Boletines) con integración de búsqueda inteligente, generacion automatizada y base de datos especializada.
+
 ---
 Agricultural Document Generation System (Bulletins) with smart search integration, automated generation, and a specialized database.
 
