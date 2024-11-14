@@ -1,9 +1,8 @@
 # GRUPO12-2024-PROYINF 🌱
 
-Sistema de generación de documentos agrícolas (Boletines) con integración de búsqueda inteligente, generacion automatizada y base de datos especializada.
+[ES] Sistema de Generación de Documentos Agrícolas (Boletines) con integración de búsqueda inteligente, generacion automatizada y base de datos especializada.
 
----
-Agricultural Document Generation System (Bulletins) with smart search integration, automated generation, and a specialized database.
+[EN] Agricultural Document Generation System (Bulletins) with smart search integration, automated generation, and a specialized database.
 
 ## 🚀 Descripción
 Este proyecto consiste en un sistema web para la generación y gestión de Boletines del Ministerio de Agricultura del Gobierno de Chile, implementando tecnologías modernas y APIs de búsqueda inteligente.
