@@ -42,14 +42,14 @@
 ## 🔧 Estado Actual de la API | API Current State
 
 ### NewsScraper API - [Weblink](https://www.newscatcherapi.com/)
-- Estado: En desarrollo, Pendiente | In developement, Pending
+- Estado: En desarrollo, Pendiente | In development, Pending
 - Versión: 1.0.0
 - Última actualización: [08-11-2024]
 - [ES] Nos encontramos a la espera de su respuesta para tener acceso a la API gratis (o pagada, en casos futuros) para investigadores, estudiantes y organizaciones sin fines de lucro. En caso del ser exitoso, la utilizariamos para navegar y filtrar resultados de noticias a nivel global.
 - [EN] We are awaiting your response to gain access to the free API (or paid access, in future cases) for researchers, students, and non-profit organizations. If successful, we would use it to browse and filter news results on a global scale.
 
 ### SerpApi - [Weblink](https://serpapi.com/)
-- Estado: En desarrollo | In developement
+- Estado: En desarrollo | In development
 - Versión: 1.0.0
 - Última actualización: [08-11-2024]
 - [ES] Nos encontramos desarrollando el codigo necesario para utilizarla en sitios especificos utilizados frecuentemente en la generacion de Boletines.
