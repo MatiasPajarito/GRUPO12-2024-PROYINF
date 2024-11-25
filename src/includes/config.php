@@ -1,8 +1,8 @@
 <?php
 // Configuración de la base de datos
 define('DB_HOST', 'localhost');
-define('DB_USER', 'tu_usuario');
-define('DB_PASS', 'tu_contraseña');
+define('DB_USER', 'root');
+define('DB_PASS', '');
 define('DB_NAME', 'boletines_db');
 
 // Configuración de la aplicación
