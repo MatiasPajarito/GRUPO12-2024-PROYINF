@@ -290,9 +290,9 @@
             
                     <!-- Indicaciones extra -->
                     <label for="indicaciones">Indicaciones Extra</label>
-                    <textarea id="indicaciones" name="indicaciones" 
-                              placeholder="Ingrese cualquier indicación adicional para la búsqueda" 
-                              rows="4"></textarea>
+                    <textarea 
+                        id="indicaciones" name="indicaciones" placeholder="Ingrese cualquier indicación adicional para la búsqueda" rows="4">
+                    </textarea>
             
                     <input type="submit" value="Generar Boletín">
                 </form>
@@ -307,89 +307,84 @@
         </div>
     </div>
 
-    <script>
-        // Sistema de manejo de etiquetas
-        document.addEventListener('DOMContentLoaded', function() {
-            const tagsContainer = document.getElementById('tagsContainer');
-            const tagsInput = document.getElementById('tagsInput');
-            const temasHidden = document.getElementById('temasHidden');
-            let tags = [];
-    
-            function actualizarTags() {
-                temasHidden.value = JSON.stringify(tags);
-            }
-    
-            function agregarTag(texto) {
-                if (texto && !tags.includes(texto)) {
-                    tags.push(texto);
-                    const tagElement = document.createElement('div');
-                    tagElement.className = 'tag';
-                    tagElement.innerHTML = `
-                        ${texto}
-                        <span class="tag-close" onclick="this.parentElement.remove(); 
-                        tags = tags.filter(t => t !== '${texto}'); actualizarTags();">×</span>
-                    `;
-                    tagsContainer.insertBefore(tagElement, tagsInput);
-                    actualizarTags();
-                }
-            }
-    
-            tagsInput.addEventListener('keydown', function(e) {
-                if (e.key === 'Enter' || e.key === ',') {
-                    e.preventDefault();
-                    const texto = this.value.trim();
-                    if (texto) {
-                        agregarTag(texto);
-                        this.value = '';
-                    }
-                }
-            });
-    
-            // Validación del formulario actualizada
-            window.validarFormulario = function(event) {
-                const titulo = document.getElementById('titulo').value.trim();
-                const indicaciones = document.getElementById('indicaciones').value.trim();
-                
-                if (!titulo) {
-                    alert("El título es obligatorio.");
-                    event.preventDefault();
-                    return;
-                }
-    
-                if (tags.length === 0) {
-                    alert("Debe ingresar al menos un tema de interés.");
-                    event.preventDefault();
-                    return;
-                }
-    
-                if (!indicaciones) {
-                    alert("Las indicaciones son obligatorias.");
-                    event.preventDefault();
-                    return;
-                }
-            }
-        });
-    </script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const tagsContainer = document.getElementById('tagsContainer');
+    const tagsInput = document.getElementById('tagsInput');
+    const temasHidden = document.getElementById('temasHidden');
+    let tags = [];
 
-    <script>
-        function mostrarCampoTema() {
-            const temaSelect = document.getElementById("tema");
-            const campoOtroTema = document.getElementById("otroTemaContainer");
-            if (temaSelect.value === "otro") {
-                campoOtroTema.classList.remove("hidden");
-            } else {
-                campoOtroTema.classList.add("hidden");
-                document.getElementById("otroTema").value = "";
+    // Función para actualizar el input hidden con formato CSV
+    function actualizarTags() {
+        temasHidden.value = tags.join(', '); // Convierte array a CSV
+    }
+
+    function agregarTag(texto) {
+        if (texto && !tags.includes(texto)) {
+            tags.push(texto);
+            const tagElement = document.createElement('div');
+            tagElement.className = 'tag';
+            tagElement.innerHTML = `
+                ${texto}
+                <span class="tag-close" onclick="eliminarTag(this, '${texto}')">×</span>
+            `;
+            tagsContainer.insertBefore(tagElement, tagsInput);
+            actualizarTags();
+        }
+    }
+
+    // Función global para eliminar tags
+    window.eliminarTag = function(element, texto) {
+        element.parentElement.remove();
+        tags = tags.filter(t => t !== texto);
+        actualizarTags();
+    };
+
+    tagsInput.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' || e.key === ',') {
+            e.preventDefault();
+            const texto = this.value.trim();
+            if (texto) {
+                agregarTag(texto);
+                this.value = '';
             }
         }
+    });
 
-        function validarFormulario(event) {
-            const descripcion = document.getElementById("descripcion").value.trim();
-            if (!descripcion) {
-                alert("La descripción es obligatoria.");
-                event.preventDefault();
-            }
+    // Única función de validación
+    window.validarFormulario = function(event) {
+        event.preventDefault();
+
+        const titulo = document.getElementById('titulo').value.trim();
+        const span = document.getElementById('span').value;
+        const indicaciones = document.getElementById('indicaciones').value.trim();
+        
+        if (!titulo) {
+            alert("El título es obligatorio.");
+            return false;
         }
-    </script>
+
+        if (tags.length === 0) {
+            alert("Debe ingresar al menos un tema de interés.");
+            return false;
+        }
+
+        if (!span) {
+            alert("Debe seleccionar un período de búsqueda.");
+            return false;
+        }
+
+        if (!indicaciones) {
+            alert("Las indicaciones son obligatorias.");
+            return false;
+        }
+
+        // Si todo está bien, envía el formulario
+        document.querySelector('form').submit();
+        return true;
+    };
+});
+</script>
+    
 </body>
 </html>
