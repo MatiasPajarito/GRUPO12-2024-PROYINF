@@ -35,13 +35,13 @@
 - API Documentation
 
 ## 🎥 Demostración | Demo
-[ES] Para una visión general del proyecto, puedes ver nuestra 
-- [presentación: demo](https://www.youtube.com/watch?v=TAgy9_8pgcM).
-- [presentación: v.1.0.1](https://www.youtube.com/watch?v=AJQNeQblx5g).
+[ES] Para una visión general del proyecto, puedes ver nuestra presentaciones en video:
+- [YouTube: demo](https://www.youtube.com/watch?v=TAgy9_8pgcM).
+- [YouTube: v.1.0.1](https://www.youtube.com/watch?v=AJQNeQblx5g).
 
-[EN] For an overview of the project, you can watch our 
-- [video presentation: demo](https://www.youtube.com/watch?v=TAgy9_8pgcM).
-- [presentacion: v.1.0.1](https://www.youtube.com/watch?v=AJQNeQblx5g).
+[EN] For an overview of the project, you can watch our video presentations:
+- [YouTube: demo](https://www.youtube.com/watch?v=TAgy9_8pgcM).
+- [YouTube: v.1.0.1](https://www.youtube.com/watch?v=AJQNeQblx5g).
 
 ## 🔧 Estado Actual de la API | API Current State
 
