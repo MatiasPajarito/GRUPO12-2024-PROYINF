@@ -29,7 +29,7 @@ def search_news(keywords, months=1):
     params = {
         "q": keywords.replace(",", " OR "),
         "lang": "es",
-        "page_size": 5,
+        "page_size": 6,
         "sort_by": "relevancy",
         "from": from_date_str,
         "search_in": "title_summary",

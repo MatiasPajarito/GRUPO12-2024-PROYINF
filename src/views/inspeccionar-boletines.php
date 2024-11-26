@@ -218,21 +218,29 @@
         }
 
         .content-box {
-            background: #f7f6f9;
-            border: 1px solid #e1e8ed;
-            padding: 25px;
-            border-radius: 15px;
-            margin: 20px 0;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
+    background: #f7f6f9;
+    border: 1px solid #e1e8ed;
+    padding: 25px;
+    border-radius: 15px;
+    margin: 20px 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
 
-        .content-box h3 {
-            color: #2c3e50;
-            font-size: 2em;
-            margin-bottom: 20px;
-            font-weight: 600;
-            text-align: center;
-        }
+.content-box h3 {
+    color: #2c3e50;
+    font-size: 2em;
+    margin-bottom: 20px;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* Contenedor para el grid de dos columnas */
+.content-dynamic {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 10px;
+}
 
         .inspect-btn {
             background: none;
@@ -251,11 +259,13 @@
 
         .content-item {
     background: #ffffff;
-    margin-bottom: 25px;
-    padding: 22px;
+    padding: 20px;
     border: 1px solid #e1e8ed;
     border-radius: 12px;
     position: relative;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
 }
 
 .content-item::before {
@@ -274,35 +284,27 @@
     background: linear-gradient(45deg, #f1f5f9, #f8fafc);
 }
 
-
-.content-item:last-child {
-    margin-bottom: 0;
-}
-
 .content-item h4 {
     color: #2c3e50;
-    font-size: 1.5em;
-    margin-bottom: 20px;
+    font-size: 1.2em;
+    margin-bottom: 15px;
     font-weight: 600;
 }
 
 .content-item p {
     color: #4a5568;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1.1em;
-    font-weight: 500;
-    line-height: 1.9;
-    margin: 12px 0;
-    text-align: justify;
+    font-size: 1em;
+    line-height: 1.6;
+    margin: 10px 0;
+    flex-grow: 1;
 }
 
 .content-item a {
     color: #3498db;
-    font-family: 'Roboto', sans-serif;
     text-decoration: none;
     display: inline-flex;
     align-items: center;
-    margin-top: 10px;
+    margin-top: auto;
     font-size: 0.9em;
     font-weight: 500;
     padding: 6px 12px;
@@ -314,7 +316,17 @@
 .content-item a:hover {
     background: rgba(52, 152, 219, 0.2);
     color: #2980b9;
-    text-decoration: none;
+}
+
+/* Responsive design para móviles */
+@media (max-width: 768px) {
+    .content-dynamic {
+        grid-template-columns: 1fr;
+    }
+    
+    .content-item {
+        margin-bottom: 15px;
+    }
 }
 
 /* Eliminar la línea hr y usar un diseño más moderno */
@@ -446,12 +458,20 @@
             </div>
 
             <div class="content-box">
-                <h3>Publicaciones Científicas</h3>
+                <h3>Publicaciones Científicas:
+                <a href="https://www.sciencedirect.com/" target="_blank">
+                    ScienceDirect <i class="fas fa-external-link-alt" style="margin-left: 6px; font-size: 0.9em;"></i>
+                </a>
+                </h3>
                 <!-- Contenido para publicaciones científicas -->
             </div>
 
             <div class="content-box">
-                <h3>Patentes</h3>
+                <h3>Patentes: 
+                <a href="https://patentscope.wipo.int/" target="_blank">
+                    WIPO <i class="fas fa-external-link-alt" style="margin-left: 6px; font-size: 0.9em;"></i>
+                </a>
+                </h3>
                 <!-- Contenido para patentes -->
             </div>
 
