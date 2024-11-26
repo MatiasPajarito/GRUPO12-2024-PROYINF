@@ -308,6 +308,7 @@
     </div>
 
 <script>
+
 document.addEventListener('DOMContentLoaded', function() {
     const tagsContainer = document.getElementById('tagsContainer');
     const tagsInput = document.getElementById('tagsInput');
@@ -352,38 +353,109 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Única función de validación
-    window.validarFormulario = function(event) {
-        event.preventDefault();
+window.validarFormulario = async function(event) {
+    event.preventDefault();
 
-        const titulo = document.getElementById('titulo').value.trim();
-        const span = document.getElementById('span').value;
-        const indicaciones = document.getElementById('indicaciones').value.trim();
+    // Validaciones básicas
+    const titulo = document.getElementById('titulo').value.trim();
+    const span = document.getElementById('span').value;
+    const indicaciones = document.getElementById('indicaciones').value.trim();
+    const temas = document.getElementById('temasHidden').value;
+    
+    // Verificar campos requeridos
+    if (!titulo) {
+        alert("El título es obligatorio.");
+        return false;
+    }
+
+    if (tags.length === 0) {
+        alert("Debe ingresar al menos un tema de interés.");
+        return false;
+    }
+
+    if (!span) {
+        alert("Debe seleccionar un período de búsqueda.");
+        return false;
+    }
+
+    if (!indicaciones) {
+        alert("Las indicaciones son obligatorias.");
+        return false;
+    }
+
+    // Convertir plazo a meses
+    let plazoMeses = 1;
+    if (span.includes('mes')) {
+        plazoMeses = parseInt(span);
+    } else if (span.includes('año')) {
+        plazoMeses = parseInt(span) * 12;
+    }
+
+    // Consultar API
+    const apiResults = await consultarAPI(temas, plazoMeses);
+    
+    if (apiResults && apiResults.noticias !== undefined) {
+        // Agregar resultado como campo oculto
+        const input = document.createElement('input');
+        input.type = 'hidden';
+        input.name = 'noticias';
+        input.value = apiResults.noticias;
+        document.querySelector('form').appendChild(input);
         
-        if (!titulo) {
-            alert("El título es obligatorio.");
-            return false;
-        }
-
-        if (tags.length === 0) {
-            alert("Debe ingresar al menos un tema de interés.");
-            return false;
-        }
-
-        if (!span) {
-            alert("Debe seleccionar un período de búsqueda.");
-            return false;
-        }
-
-        if (!indicaciones) {
-            alert("Las indicaciones son obligatorias.");
-            return false;
-        }
-
-        // Si todo está bien, envía el formulario
+        // Enviar formulario
         document.querySelector('form').submit();
         return true;
-    };
+    }
+    
+    return false;
+};
+    
+
 });
+
+// Función para consultar API
+async function consultarAPI(temas, plazo) {
+    const submitButton = document.querySelector('input[type="submit"]');
+    submitButton.value = 'Consultando API...';
+    submitButton.disabled = true;
+
+    try {
+        const response = await fetch('consultar-api-noticias.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                temas: temas,
+                plazo: plazo
+            })
+        });
+        
+        const data = await response.json();
+        
+        if (data.status === 'success') {
+            console.log(`Consulta exitosa: ${data.count} noticias encontradas`);
+            alert(`Búsqueda completada: Se encontraron ${data.count} noticias`);
+            return data;
+        } else {
+            console.error('Error en la consulta:', data.message);
+            alert(`Error en la consulta: ${data.message}`);
+            return null;
+        }
+    } catch (error) {
+        console.error('Error:', error);
+        alert('Error al realizar la consulta');
+        return null;
+    } finally {
+        submitButton.value = 'Generar Boletín';
+        submitButton.disabled = false;
+    }
+}
+
+// Agregar este código en el <script> existente
+
+
+
 </script>
     
 </body>

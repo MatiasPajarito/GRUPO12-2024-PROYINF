@@ -1,0 +1,127 @@
+[2024-11-26 03:11:33] Iniciando nueva consulta API
+[2024-11-26 03:11:33] Datos recibidos: {"temas":"Terremoto, Japon, Tsunami","plazo":36}
+[2024-11-26 03:11:33] Datos decodificados: Array
+(
+    [temas] => Terremoto, Japon, Tsunami
+    [plazo] => 36
+)
+
+[2024-11-26 03:11:33] Ejecutando búsqueda para temas: Terremoto, Japon, Tsunami, plazo: 36 meses
+[2024-11-26 03:11:33] Comando a ejecutar: python3 ^"C:^\xampp^\htdocs^\GRUPO12-2024-PROYINF^\src^\views/ScrapingAPI-NewsCatcher.py^" ^"Terremoto, Japon, Tsunami^" 36
+[2024-11-26 03:11:33] Salida del script Python: 
+[2024-11-26 03:11:33] Error: Fallo al decodificar la respuesta del script Python
+[2024-11-26 03:12:22] Iniciando nueva consulta API
+[2024-11-26 03:12:22] Datos recibidos: {"temas":"Terremoto, Japon","plazo":36}
+[2024-11-26 03:12:22] Datos decodificados: Array
+(
+    [temas] => Terremoto, Japon
+    [plazo] => 36
+)
+
+[2024-11-26 03:12:22] Ejecutando búsqueda para temas: Terremoto, Japon, plazo: 36 meses
+[2024-11-26 03:12:22] Comando a ejecutar: python3 ^"C:^\xampp^\htdocs^\GRUPO12-2024-PROYINF^\src^\views/ScrapingAPI-NewsCatcher.py^" ^"Terremoto, Japon^" 36
+[2024-11-26 03:12:23] Salida del script Python: 
+[2024-11-26 03:12:23] Error: Fallo al decodificar la respuesta del script Python
+[2024-11-26 03:17:09] Iniciando nueva consulta API
+[2024-11-26 03:17:09] Datos recibidos: {"temas":"Terremoto, Japon","plazo":36}
+[2024-11-26 03:17:09] Datos decodificados: Array
+(
+    [temas] => Terremoto, Japon
+    [plazo] => 36
+)
+
+[2024-11-26 03:17:09] Ejecutando búsqueda para temas: Terremoto, Japon, plazo: 36 meses
+[2024-11-26 03:17:09] Comando a ejecutar: python3 ^"C:^\xampp^\htdocs^\GRUPO12-2024-PROYINF^\src^\views/ScrapingAPI-NewsCatcher.py^" ^"Terremoto, Japon^" 36
+[2024-11-26 03:17:10] Salida raw del script Python: 
+[2024-11-26 03:17:10] Error: No se recibió respuesta del script Python
+[2024-11-26 03:23:08] shell_exec habilitado: SÍ
+[2024-11-26 03:23:08] Funciones deshabilitadas: 
+[2024-11-26 03:23:08] Iniciando nueva consulta API
+[2024-11-26 03:23:08] Datos recibidos: {"temas":"Terremoto, Japon, Tsunami","plazo":24}
+[2024-11-26 03:23:08] Datos decodificados: Array
+(
+    [temas] => Terremoto, Japon, Tsunami
+    [plazo] => 24
+)
+
+[2024-11-26 03:23:08] Ejecutando búsqueda para temas: Terremoto, Japon, Tsunami, plazo: 24 meses
+[2024-11-26 03:23:08] Comando a ejecutar: python3 ^"C:^\xampp^\htdocs^\GRUPO12-2024-PROYINF^\src^\views/ScrapingAPI-NewsCatcher.py^" ^"Terremoto, Japon, Tsunami^" 24
+[2024-11-26 03:23:09] Salida raw del script Python: {"status": "error", "message": "Error en la API: 401 - {\"message\":\"Invalid api key: 7m2um9vc5JcC3RItkT15p9aIExaGkVuXBLOKgyKDTfU\",\"status_code\":401,\"status\":\"Unauthorized\"}", "noticias": ""}
+
+[2024-11-26 03:23:09] Resultado del json_decode: Array
+(
+    [status] => error
+    [message] => Error en la API: 401 - {"message":"Invalid api key: 7m2um9vc5JcC3RItkT15p9aIExaGkVuXBLOKgyKDTfU","status_code":401,"status":"Unauthorized"}
+    [noticias] => 
+)
+
+[2024-11-26 03:23:09] Consulta completada. Status: error
+[2024-11-26 03:34:14] shell_exec habilitado: SÍ
+[2024-11-26 03:34:14] Funciones deshabilitadas: 
+[2024-11-26 03:34:14] Iniciando nueva consulta API
+[2024-11-26 03:34:14] Datos recibidos: {"temas":"Terremoto, Temblor, Chile","plazo":12}
+[2024-11-26 03:34:14] Datos decodificados: Array
+(
+    [temas] => Terremoto, Temblor, Chile
+    [plazo] => 12
+)
+
+[2024-11-26 03:34:14] Ejecutando búsqueda para temas: Terremoto, Temblor, Chile, plazo: 12 meses
+[2024-11-26 03:34:14] Comando a ejecutar: python3 ^"C:^\xampp^\htdocs^\GRUPO12-2024-PROYINF^\src^\views/ScrapingAPI-NewsCatcher.py^" ^"Terremoto, Temblor, Chile^" 12
+[2024-11-26 03:34:15] Salida raw del script Python: {"status": "error", "message": "Error en la API: 406 - {\"status\":\"error\",\"error_code\":\"UnsupportedParameter\",\"message\":\"Found unsupported parameter(s)['from_']. Here are the parameters available for you plan => ['q', 'from', 'to', 'lang', 'not_lang', 'search_in', 'countries', 'not_countries', 'topic', 'sources', 'not_sources', 'sort_by', 'ranked_only', 'from_rank', 'to_rank', 'page', 'page_size', 'published_date_precision', 'author', 'author_null', 'outlet_name', 'enable_parse_date', 'enable_full_semantics', 'is_opinion', 'aggregation_by', 'is_republisher']\"}\n", "noticias": ""}
+
+[2024-11-26 03:34:15] Resultado del json_decode: Array
+(
+    [status] => error
+    [message] => Error en la API: 406 - {"status":"error","error_code":"UnsupportedParameter","message":"Found unsupported parameter(s)['from_']. Here are the parameters available for you plan => ['q', 'from', 'to', 'lang', 'not_lang', 'search_in', 'countries', 'not_countries', 'topic', 'sources', 'not_sources', 'sort_by', 'ranked_only', 'from_rank', 'to_rank', 'page', 'page_size', 'published_date_precision', 'author', 'author_null', 'outlet_name', 'enable_parse_date', 'enable_full_semantics', 'is_opinion', 'aggregation_by', 'is_republisher']"}
+
+    [noticias] => 
+)
+
+[2024-11-26 03:34:15] Consulta completada. Status: error
+[2024-11-26 03:36:09] shell_exec habilitado: SÍ
+[2024-11-26 03:36:09] Funciones deshabilitadas: 
+[2024-11-26 03:36:09] Iniciando nueva consulta API
+[2024-11-26 03:36:09] Datos recibidos: {"temas":"Terremoto, Chile","plazo":12}
+[2024-11-26 03:36:09] Datos decodificados: Array
+(
+    [temas] => Terremoto, Chile
+    [plazo] => 12
+)
+
+[2024-11-26 03:36:09] Ejecutando búsqueda para temas: Terremoto, Chile, plazo: 12 meses
+[2024-11-26 03:36:09] Comando a ejecutar: python3 ^"C:^\xampp^\htdocs^\GRUPO12-2024-PROYINF^\src^\views/ScrapingAPI-NewsCatcher.py^" ^"Terremoto, Chile^" 12
+[2024-11-26 03:36:10] Salida raw del script Python: {"status": "error", "message": "Error en la API: 406 - {\"status\":\"error\",\"error_code\":\"WrongParameter\",\"message\":\"[search_in] parameter should be 'title', 'summary', or 'title_summary'\"}\n", "noticias": ""}
+
+[2024-11-26 03:36:10] Resultado del json_decode: Array
+(
+    [status] => error
+    [message] => Error en la API: 406 - {"status":"error","error_code":"WrongParameter","message":"[search_in] parameter should be 'title', 'summary', or 'title_summary'"}
+
+    [noticias] => 
+)
+
+[2024-11-26 03:36:10] Consulta completada. Status: error
+[2024-11-26 03:36:38] shell_exec habilitado: SÍ
+[2024-11-26 03:36:38] Funciones deshabilitadas: 
+[2024-11-26 03:36:38] Iniciando nueva consulta API
+[2024-11-26 03:36:38] Datos recibidos: {"temas":"Terremoto, Chile","plazo":12}
+[2024-11-26 03:36:38] Datos decodificados: Array
+(
+    [temas] => Terremoto, Chile
+    [plazo] => 12
+)
+
+[2024-11-26 03:36:38] Ejecutando búsqueda para temas: Terremoto, Chile, plazo: 12 meses
+[2024-11-26 03:36:38] Comando a ejecutar: python3 ^"C:^\xampp^\htdocs^\GRUPO12-2024-PROYINF^\src^\views/ScrapingAPI-NewsCatcher.py^" ^"Terremoto, Chile^" 12
+[2024-11-26 03:36:41] Salida raw del script Python: {"status": "success", "noticias": "(Temblor de 4.2 de magnitud se siente en la ciudad de Socaire,Debido a su ubicaci\u00f3n geogr\u00e1fica  Chile est\u00e1 expuesto a sufrir constantemente de este tipo de eventos s\u00edsmicos,https://www.infobae.com/noticias/2024/05/27/temblor-de-42-de-magnitud-se-siente-en-la-ciudad-de-socaire),(Nuevo sismo sacude a Chile: magnitud 4.0 en Socaire,Chile es uno de los pa\u00edses con mayor actividad s\u00edsmica del mundo  por lo que es importante estar alerta ante cualquier movimiento tel\u00farico,https://www.infobae.com/noticias/2024/05/29/nuevo-sismo-sacude-a-chile-magnitud-40-en-socaire),(Tiembla en Chile: sismo de magnitud 4.3 con epicentro en Mina La Escondida.,El sismo se registr\u00f3 a las 08:29 horas a 100.0 kilometros de distancia de Mina La Escondida. y tuvo una profundidad de 94.0 kilometros,https://www.infobae.com/noticias/2024/05/09/tiembla-en-chile-sismo-de-magnitud-43-con-epicentro-en-mina-la-escondida),(La ciudad de Alto Hospicio registra sismo de magnitud 4.1,El sismo se registr\u00f3 a las 12:26 horas a 100.0 kilometros de distancia de Alto Hospicio y tuvo una profundidad de 30.0 kilometros,https://www.infobae.com/noticias/2024/05/03/la-ciudad-de-alto-hospicio-registra-sismo-de-magnitud-41),(Temblor de 4.1 de magnitud sacude a la ciudad de Visviri,El sismo se registr\u00f3 a las 09:40 horas a 45.0 kilometros de distancia de Visviri y tuvo una profundidad de 152.0 kilometros,https://www.infobae.com/noticias/2024/05/09/temblor-de-41-de-magnitud-sacude-a-la-ciudad-de-visviri),(Se siente sismo de magnitud 4.2 en la ciudad de Baquedano,El sismo se registr\u00f3 a las 22:27 horas a 50.0 kilometros de distancia de Baquedano y tuvo una profundidad de 76.0 kilometros,https://www.infobae.com/noticias/2024/05/16/se-siente-sismo-de-magnitud-42-en-la-ciudad-de-baquedano),(Temblor en Chile en vivo hoy  lunes 15 de julio: hora  magnitud y epicentro del \u00faltimo sismo reportado por CSN,Revisa los sismos que han ocurrido hoy  lunes 15 de julio  con los datos de epicentro y magnitud  indicados por el Centro Sismol\u00f3gico Nacional de la Universidad de Chile.,https://gestion.pe/mix/respuestas/temblor-en-chile-en-vivo-hoy-15-16-de-julio-hora-exacta-magnitud-y-epicentro-del-ultimo-sismo-reporte-oficial-nnda-nnrt-reportado-por-csn-centro-sismologico-nacional-tiempo-real-noticia),(La ciudad de Socaire siente temblor de magnitud 4.1,El sismo se registr\u00f3 a las 01:06 horas a 76.0 kilometros de distancia de Socaire y tuvo una profundidad de 300.0 kilometros,https://www.infobae.com/noticias/2024/05/01/la-ciudad-de-socaire-siente-temblor-de-magnitud-41),(Chile: se registra sismo de magnitud 4.2 en Calama,Chile es uno de los pa\u00edses con mayor actividad s\u00edsmica del mundo  por lo que es importante estar alerta ante cualquier movimiento tel\u00farico,https://www.infobae.com/noticias/2024/05/29/chile-se-registra-sismo-de-magnitud-42-en-calama),(La ciudad de Socaire siente temblor de magnitud 4.5,A lo largo de su historia  Chile ha reportado diversos temblores que han dejado muertos  heridos y da\u00f1os materiales,https://www.infobae.com/noticias/2024/05/31/la-ciudad-de-socaire-siente-temblor-de-magnitud-45),(La ciudad de Socaire percibe temblor de magnitud 4.4,Chile es uno de los pa\u00edses con mayor actividad s\u00edsmica del mundo  por lo que es importante estar alerta ante cualquier movimiento tel\u00farico,https://www.infobae.com/noticias/2024/05/30/la-ciudad-de-socaire-percibe-temblor-de-magnitud-44),(La ciudad de Calama registra temblor de magnitud 4.0,En Chile los sismos fuertes son una constante  incluso en el pa\u00eds ocurri\u00f3 el mayor terremoto del que se tenga registro,https://www.infobae.com/noticias/2024/05/25/la-ciudad-de-calama-registra-temblor-de-magnitud-40),(Se percibe sismo de magnitud 4.0 en la ciudad de Socaire,En Chile los terremotos son una constante  incluso en el pa\u00eds ocurri\u00f3 el mayor terremoto del que se tenga registro,https://www.infobae.com/noticias/2024/05/31/se-percibe-sismo-de-magnitud-40-en-la-ciudad-de-socaire),(Nuevo sismo sacude a Chile: magnitud 4.1 en Tierra Amarilla,Chile es uno de los pa\u00edses con mayor actividad s\u00edsmica del mundo  por lo que es importante estar alerta ante cualquier movimiento tel\u00farico,https://www.infobae.com/noticias/2024/05/16/nuevo-sismo-sacude-a-chile-magnitud-41-en-tierra-amarilla),(Se registra sismo de magnitud 4.1 en la ciudad de Calama,Debido a su ubicaci\u00f3n geogr\u00e1fica  Chile est\u00e1 expuesto a sufrir constantemente de este tipo de eventos s\u00edsmicos,https://www.infobae.com/noticias/2024/05/14/se-registra-sismo-de-magnitud-41-en-la-ciudad-de-calama),(Tiembla en Chile: sismo de 4.0 de magnitud,A lo largo de su historia  Chile ha enfrentado diversos terremotos que han dejado muertos  heridos y da\u00f1os materiales,https://www.infobae.com/noticias/2024/05/04/tiembla-en-chile-sismo-de-40-de-magnitud),(La ciudad de Lebu registra sismo de magnitud 4.7,En Chile los sismos fuertes son una constante  incluso en el pa\u00eds ocurri\u00f3 el mayor terremoto del que se tenga registro,https://www.infobae.com/noticias/2024/05/25/la-ciudad-de-lebu-registra-sismo-de-magnitud-47),(Tiembla en Chile: sismo de 4.0 de magnitud en Tocopilla,Debido a su ubicaci\u00f3n geogr\u00e1fica  Chile est\u00e1 expuesto a sufrir constantemente de este tipo de eventos s\u00edsmicos,https://www.infobae.com/noticias/2024/05/06/tiembla-en-chile-sismo-de-40-de-magnitud-en-tocopilla),(Temblor en Chile: sismo de magnitud 4.0 con epicentro en la ciudad de Alto del Carmen,Debido a su ubicaci\u00f3n geogr\u00e1fica  Chile est\u00e1 expuesto a sufrir constantemente de este tipo de eventos s\u00edsmicos,https://www.infobae.com/noticias/2024/06/08/temblor-en-chile-sismo-de-magnitud-40-con-epicentro-en-la-ciudad-de-alto-del-carmen),(Temblor en Chile en vivo hoy  mi\u00e9rcoles 17 de julio: hora exacta  magnitud y epicentro reportado por CSN,Consulta en esta nota los \u00faltimos sismos en Chile de hoy  mi\u00e9rcoles 17 de julio  con los datos de epicentro y magnitud  indicados por el Centro Sismol\u00f3gico Nacional  CSN  de la Universidad de Chile.,https://gestion.pe/mix/respuestas/temblor-en-chile-hoy-ultimo-sismo-en-vivo-17-al-18-de-julio-epicentro-magnitud-hora-exacta-reporte-en-tiempo-real-centro-sismologico-nacional-csn-nnda-nnrt-noticia)", "count": 20}
+
+[2024-11-26 03:36:41] Resultado del json_decode: Array
+(
+    [status] => success
+    [noticias] => (Temblor de 4.2 de magnitud se siente en la ciudad de Socaire,Debido a su ubicación geográfica  Chile está expuesto a sufrir constantemente de este tipo de eventos sísmicos,https://www.infobae.com/noticias/2024/05/27/temblor-de-42-de-magnitud-se-siente-en-la-ciudad-de-socaire),(Nuevo sismo sacude a Chile: magnitud 4.0 en Socaire,Chile es uno de los países con mayor actividad sísmica del mundo  por lo que es importante estar alerta ante cualquier movimiento telúrico,https://www.infobae.com/noticias/2024/05/29/nuevo-sismo-sacude-a-chile-magnitud-40-en-socaire),(Tiembla en Chile: sismo de magnitud 4.3 con epicentro en Mina La Escondida.,El sismo se registró a las 08:29 horas a 100.0 kilometros de distancia de Mina La Escondida. y tuvo una profundidad de 94.0 kilometros,https://www.infobae.com/noticias/2024/05/09/tiembla-en-chile-sismo-de-magnitud-43-con-epicentro-en-mina-la-escondida),(La ciudad de Alto Hospicio registra sismo de magnitud 4.1,El sismo se registró a las 12:26 horas a 100.0 kilometros de distancia de Alto Hospicio y tuvo una profundidad de 30.0 kilometros,https://www.infobae.com/noticias/2024/05/03/la-ciudad-de-alto-hospicio-registra-sismo-de-magnitud-41),(Temblor de 4.1 de magnitud sacude a la ciudad de Visviri,El sismo se registró a las 09:40 horas a 45.0 kilometros de distancia de Visviri y tuvo una profundidad de 152.0 kilometros,https://www.infobae.com/noticias/2024/05/09/temblor-de-41-de-magnitud-sacude-a-la-ciudad-de-visviri),(Se siente sismo de magnitud 4.2 en la ciudad de Baquedano,El sismo se registró a las 22:27 horas a 50.0 kilometros de distancia de Baquedano y tuvo una profundidad de 76.0 kilometros,https://www.infobae.com/noticias/2024/05/16/se-siente-sismo-de-magnitud-42-en-la-ciudad-de-baquedano),(Temblor en Chile en vivo hoy  lunes 15 de julio: hora  magnitud y epicentro del último sismo reportado por CSN,Revisa los sismos que han ocurrido hoy  lunes 15 de julio  con los datos de epicentro y magnitud  indicados por el Centro Sismológico Nacional de la Universidad de Chile.,https://gestion.pe/mix/respuestas/temblor-en-chile-en-vivo-hoy-15-16-de-julio-hora-exacta-magnitud-y-epicentro-del-ultimo-sismo-reporte-oficial-nnda-nnrt-reportado-por-csn-centro-sismologico-nacional-tiempo-real-noticia),(La ciudad de Socaire siente temblor de magnitud 4.1,El sismo se registró a las 01:06 horas a 76.0 kilometros de distancia de Socaire y tuvo una profundidad de 300.0 kilometros,https://www.infobae.com/noticias/2024/05/01/la-ciudad-de-socaire-siente-temblor-de-magnitud-41),(Chile: se registra sismo de magnitud 4.2 en Calama,Chile es uno de los países con mayor actividad sísmica del mundo  por lo que es importante estar alerta ante cualquier movimiento telúrico,https://www.infobae.com/noticias/2024/05/29/chile-se-registra-sismo-de-magnitud-42-en-calama),(La ciudad de Socaire siente temblor de magnitud 4.5,A lo largo de su historia  Chile ha reportado diversos temblores que han dejado muertos  heridos y daños materiales,https://www.infobae.com/noticias/2024/05/31/la-ciudad-de-socaire-siente-temblor-de-magnitud-45),(La ciudad de Socaire percibe temblor de magnitud 4.4,Chile es uno de los países con mayor actividad sísmica del mundo  por lo que es importante estar alerta ante cualquier movimiento telúrico,https://www.infobae.com/noticias/2024/05/30/la-ciudad-de-socaire-percibe-temblor-de-magnitud-44),(La ciudad de Calama registra temblor de magnitud 4.0,En Chile los sismos fuertes son una constante  incluso en el país ocurrió el mayor terremoto del que se tenga registro,https://www.infobae.com/noticias/2024/05/25/la-ciudad-de-calama-registra-temblor-de-magnitud-40),(Se percibe sismo de magnitud 4.0 en la ciudad de Socaire,En Chile los terremotos son una constante  incluso en el país ocurrió el mayor terremoto del que se tenga registro,https://www.infobae.com/noticias/2024/05/31/se-percibe-sismo-de-magnitud-40-en-la-ciudad-de-socaire),(Nuevo sismo sacude a Chile: magnitud 4.1 en Tierra Amarilla,Chile es uno de los países con mayor actividad sísmica del mundo  por lo que es importante estar alerta ante cualquier movimiento telúrico,https://www.infobae.com/noticias/2024/05/16/nuevo-sismo-sacude-a-chile-magnitud-41-en-tierra-amarilla),(Se registra sismo de magnitud 4.1 en la ciudad de Calama,Debido a su ubicación geográfica  Chile está expuesto a sufrir constantemente de este tipo de eventos sísmicos,https://www.infobae.com/noticias/2024/05/14/se-registra-sismo-de-magnitud-41-en-la-ciudad-de-calama),(Tiembla en Chile: sismo de 4.0 de magnitud,A lo largo de su historia  Chile ha enfrentado diversos terremotos que han dejado muertos  heridos y daños materiales,https://www.infobae.com/noticias/2024/05/04/tiembla-en-chile-sismo-de-40-de-magnitud),(La ciudad de Lebu registra sismo de magnitud 4.7,En Chile los sismos fuertes son una constante  incluso en el país ocurrió el mayor terremoto del que se tenga registro,https://www.infobae.com/noticias/2024/05/25/la-ciudad-de-lebu-registra-sismo-de-magnitud-47),(Tiembla en Chile: sismo de 4.0 de magnitud en Tocopilla,Debido a su ubicación geográfica  Chile está expuesto a sufrir constantemente de este tipo de eventos sísmicos,https://www.infobae.com/noticias/2024/05/06/tiembla-en-chile-sismo-de-40-de-magnitud-en-tocopilla),(Temblor en Chile: sismo de magnitud 4.0 con epicentro en la ciudad de Alto del Carmen,Debido a su ubicación geográfica  Chile está expuesto a sufrir constantemente de este tipo de eventos sísmicos,https://www.infobae.com/noticias/2024/06/08/temblor-en-chile-sismo-de-magnitud-40-con-epicentro-en-la-ciudad-de-alto-del-carmen),(Temblor en Chile en vivo hoy  miércoles 17 de julio: hora exacta  magnitud y epicentro reportado por CSN,Consulta en esta nota los últimos sismos en Chile de hoy  miércoles 17 de julio  con los datos de epicentro y magnitud  indicados por el Centro Sismológico Nacional  CSN  de la Universidad de Chile.,https://gestion.pe/mix/respuestas/temblor-en-chile-hoy-ultimo-sismo-en-vivo-17-al-18-de-julio-epicentro-magnitud-hora-exacta-reporte-en-tiempo-real-centro-sismologico-nacional-csn-nnda-nnrt-noticia)
+    [count] => 20
+)
+
+[2024-11-26 03:36:41] Consulta completada. Status: success
+[2024-11-26 03:36:41] Noticias encontradas: 20
