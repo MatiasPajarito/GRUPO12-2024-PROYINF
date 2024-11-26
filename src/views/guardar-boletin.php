@@ -77,7 +77,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             throw new Exception("La descripción no puede exceder los 200 caracteres");
         }
 
-        if (strlen($noticias) > 2000) {
+        if (strlen($noticias) > 3000) {
             throw new Exception("Las noticias exceden el límite permitido");
         }
 
