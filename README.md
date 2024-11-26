@@ -47,11 +47,11 @@
 ## 🔧 Estado Actual de la API | API Current State
 
 ### NewsScraper API - [Weblink](https://www.newscatcherapi.com/)
-- Estado: En desarrollo, Pendiente | In development, Pending
+- Estado: En desarrollo | In development
 - Versión: 1.0.0
 - Última actualización: [08-11-2024]
-- [ES] Nos encontramos a la espera de su respuesta para tener acceso a la API gratis (o pagada, en casos futuros) para investigadores, estudiantes y organizaciones sin fines de lucro. En caso del ser exitoso, la utilizariamos para navegar y filtrar resultados de noticias a nivel global.
-- [EN] We are awaiting your response to gain access to the free API (or paid access, in future cases) for researchers, students, and non-profit organizations. If successful, we would use it to browse and filter news results on a global scale.
+- [ES] Hemos recibido acceso a la API de NewsScraper con una licencia gratuita limitada por un mes. Este acceso temporal permitirá explorar el potencial de la herramienta para realizar búsquedas amplias y filtradas de noticias en internet, lo que podría ser de gran utilidad para investigadores, estudiantes y organizaciones sin fines de lucro. Estamos evaluando su rendimiento y su aplicabilidad a proyectos futuros.
+- [EN] We have been granted access to the NewsScraper API with a free one-month license. This temporary access will allow us to explore the tool's potential for performing extensive and filtered news searches on the internet, which could prove highly valuable for researchers, students, and non-profit organizations. We are assessing its performance and applicability to future projects.
 
 ### SerpApi - [Weblink](https://serpapi.com/)
 - Estado: En desarrollo | In development
@@ -75,14 +75,11 @@
 
 ## 🚀 Instalación | Installation
 ```bash
-# Clonar el repositorio
-git clone https://github.com/tu-usuario/GRUPO12-2024-PROYINF.git
+# Descargar XAMPP (SQL, Apache y PHP)
+# Puedes descargarlo desde el siguiente enlace: https://www.apachefriends.org/
 
-# Instalar dependencias
-pip install -r requirements.txt
-
-# Configurar variables de entorno
-cp config/example.env config/development.env
+# Clonar el repositorio dentro de la carpeta htdocs de XAMPP
+git clone https://github.com/tu-usuario/GRUPO12-2024-PROYINF.git C://xampp/htdocs/CARPETA_PROYECTO
 ```
 
 ## 📝 Licencia | License
