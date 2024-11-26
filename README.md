@@ -38,11 +38,12 @@
 [ES] Para una visión general del proyecto, puedes ver nuestra presentaciones en video:
 - [YouTube: demo](https://www.youtube.com/watch?v=TAgy9_8pgcM).
 - [YouTube: v.1.0.1](https://www.youtube.com/watch?v=Cgoa0NBesHk).
+- [YouTube: v.1.0.2](https://youtu.be/gUHv5TUl1yA)
 
 [EN] For an overview of the project, you can watch our video presentations:
 - [YouTube: demo](https://www.youtube.com/watch?v=TAgy9_8pgcM) [ES].
 - [YouTube: v.1.0.1](https://www.youtube.com/watch?v=Cgoa0NBesHk) [ES].
-
+- [YouTube: v.1.0.2](https://youtu.be/gUHv5TUl1yA) [ES].
 ## 🔧 Estado Actual de la API | API Current State
 
 ### NewsScraper API - [Weblink](https://www.newscatcherapi.com/)
