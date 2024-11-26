@@ -1,4 +1,3 @@
-# ScrapingAPI-NewsCatcher.py
 import requests
 import json
 import sys
@@ -28,14 +27,14 @@ def search_news(keywords, months=1):
     }
     
     params = {
-        "q": keywords.replace(",", " OR "),    # Convertir CSV a formato OR
-        "lang": "es",                          # Español
-        "page_size": 20,                       # Límite de resultados
-        "sort_by": "relevancy",                # Ordenar por relevancia
-        "from": from_date_str,                 # Fecha desde (corregido de from_ a from)
-        "search_in": "title_summary",          # Buscar en título y resumen
-        "page": 1,                             # Página inicial
-        "enable_full_semantics": True          # Para mejor relevancia en la búsqueda
+        "q": keywords.replace(",", " OR "),
+        "lang": "es",
+        "page_size": 5,
+        "sort_by": "relevancy",
+        "from": from_date_str,
+        "search_in": "title_summary",
+        "page": 1,
+        "enable_full_semantics": True
     }
     
     try:
@@ -53,18 +52,20 @@ def search_news(keywords, months=1):
             logging.info(f"Artículos encontrados: {articles_count}")
             
             for article in data.get('articles', []):
-                title = article.get('title', '').replace(',', ' ').replace('(', ' ').replace(')', ' ').strip()
-                desc = article.get('excerpt', '').replace(',', ' ').replace('(', ' ').replace(')', ' ').strip()
+                # Limpieza y escape de comillas en título y descripción
+                title = article.get('title', '').replace('"', '""').strip()
+                desc = article.get('excerpt', '').replace('"', '""').strip()
                 url = article.get('link', '').strip()
                 
                 if title and url:
-                    result = f"({title},{desc},{url})"
+                    # Formato correcto con comillas dobles y paréntesis
+                    result = f'("{title}","{desc}","{url}")'
                     results.append(result)
                     logging.info(f"Procesado artículo: {title[:50]}...")
             
             return {
                 'status': 'success',
-                'noticias': ','.join(results),
+                'noticias': ','.join(results),  # Une los resultados con coma
                 'count': len(results)
             }
         else:

@@ -380,8 +380,8 @@
                         <th>Título</th>
                         <th>Temas</th>
                         <th>Noticas</th>
-                        <th>Patentes</th>
                         <th>Publicaciones Cientificas</th>
+                        <th>Patentes</th>
                         <th>Eventos</th>
                         <th>Proyectos</th>
                     </tr>
@@ -535,7 +535,7 @@ function testParsing(csvString) {
             // Actualizar contenido de cada caja
             const contenedores = {
                 'noticias': 0,
-                'publicaciones_cientificas': 1,
+                'pub_cientificas': 1,
                 'patentes': 2,
                 'eventos': 3,
                 'proyectos': 4
