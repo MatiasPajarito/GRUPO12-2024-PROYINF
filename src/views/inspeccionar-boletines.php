@@ -469,14 +469,27 @@
 
     <script>
 
-    function procesarCSV(csvString) {
-        if (!csvString) return '<p>No hay datos disponibles</p>';
-        
-        let html = '';
-        const tuplas = csvString.match(/\(([^)]+)\)/g) || [];
-        
-        tuplas.forEach(tupla => {
-            const [titulo, descripcion, url] = tupla.slice(1, -1).split(',').map(item => item.trim());
+// En inspeccionar-boletines.php
+function procesarCSV(csvString) {
+    if (!csvString) return '<p>No hay datos disponibles</p>';
+    
+    let html = '';
+    
+    try {
+        // Nueva expresión regular mejorada que maneja múltiples tuplas
+        const regex = /\("([^"]*?)","([^"]*?)","([^"]*?)"\)/g;
+        const matches = Array.from(csvString.matchAll(regex));
+
+        if (matches.length === 0) {
+            return '<p>No hay datos disponibles</p>';
+        }
+
+        for (const match of matches) {
+            // match[1] es título, match[2] es descripción, match[3] es url
+            const [_, titulo, descripcion, url] = match;
+            
+            console.log('Procesando tupla:', { titulo, descripcion, url }); // Para debugging
+            
             html += `
                 <div class="content-item">
                     <h4>${titulo}</h4>
@@ -486,10 +499,30 @@
                     </a>
                 </div>
             `;
-        });
+        }
         
         return html;
+    } catch (error) {
+        console.error('Error procesando CSV:', error);
+        console.log('CSV recibido:', csvString); // Para debugging
+        return '<p>Error al procesar los datos</p>';
     }
+}
+
+// Agregar una función de prueba para verificar el parsing
+function testParsing(csvString) {
+    const regex = /\("([^"]*?)","([^"]*?)","([^"]*?)"\)/g;
+    const matches = Array.from(csvString.matchAll(regex));
+    console.log('Matches encontrados:', matches.length);
+    matches.forEach((match, index) => {
+        console.log(`Tupla ${index + 1}:`, {
+            full: match[0],
+            titulo: match[1],
+            descripcion: match[2],
+            url: match[3]
+        });
+    });
+}
 
     // Función para cargar los datos y abrir el modal
     function cargarDatosModal(id) {
